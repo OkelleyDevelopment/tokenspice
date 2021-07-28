@@ -70,7 +70,7 @@ class Web3Wallet:
         gas_price = max(gas_price, self.MIN_GAS_PRICE)
         tx['nonce'] = nonce
         tx['gasPrice'] = gas_price
-        signed_tx = _web3.eth.account.sign_transaction(tx, private_key)
+        signed_tx = _web3.eth.account.sign_transaction(tx, self._private_key)
         return signed_tx.rawTransaction
 
     def sign(self, msg_hash):
