@@ -12,7 +12,7 @@ class SimStrategy(SimStrategyBase.SimStrategyBase):
 class KPIs(KPIsBase.KPIsBase):
     def takeStep(self, state):
         pass
-    def tick():
+    def tick(self):
         pass
 
 class SimpleAgent(AgentBase.AgentBase):
