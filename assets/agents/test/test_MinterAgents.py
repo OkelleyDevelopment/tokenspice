@@ -2,7 +2,7 @@ from enforce_typing import enforce_types
 
 from assets.agents.MinterAgents import *
 from assets.netlists.wsloop import SimState, SimStrategy
-from engine import AgentBase
+from engine.AgentBase import AgentBase
 from util.constants import BITCOIN_NUM_HALF_LIVES, \
     S_PER_DAY, S_PER_MONTH, S_PER_YEAR
 
