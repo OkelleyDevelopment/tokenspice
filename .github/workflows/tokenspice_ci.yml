@@ -1,11 +1,13 @@
 name: Token Spice CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build-linux:
     runs-on: ubuntu-latest
     strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
       max-parallel: 5
 
     steps:
@@ -32,3 +34,7 @@ jobs:
         run: |
           conda install mypy
           mypy ./
+      - name: Test with pytest
+        run: |
+        conda install pytest
+        pytest
