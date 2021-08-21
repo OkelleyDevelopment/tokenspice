@@ -1,14 +1,22 @@
-# 🐠 TokenSPICE: EVM Agent-Based Token Simulator
+<img src="images/fishnado2-crop.jpeg" width="100%">
 
-TokenSPICE can be used to help design, tune, and verify tokenized ecosystems in an overall Token Engineering (TE) flow.
+# TokenSPICE: EVM Agent-Based Token Simulator 🐟🌪️
 
-TokenSPICE simulates tokenized ecosystems using an agent-based approach.
+TokenSPICE simulates tokenized ecosystems via an agent-based approach, with EVM in-the-loop.
 
-Each "agent" is a class. Has a wallet, and does work to earn $. One models the system by wiring up agents, and tracking metrics (kpis). Agents may be written in pure Python, or with an EVM-based backend.
+It can help design, tune, and verify tokenized ecosystems. It's young but promising. We welcome you to contribute! 👋
 
-A "netlist" defines what you simulate, and how. It wires up a collection of agents to interact in a given way. You can write your own netlists to simulate whatever you like. The `assets/netlists` directory has examples.
+- Each "agent" is a class. Has a wallet, and does work to earn $. One models the system by wiring up agents, and tracking metrics (kpis). Agents may be written in pure Python, or with an EVM-based backend.
+- A "netlist" defines what you simulate, and how. It wires up a collection of agents to interact in a given way. You can write your own netlists to simulate whatever you like. The `assets/netlists` directory has examples.
 
-[Documentation](https://www.notion.so/TokenSPICE2-Docs-b6fc0b91269946eb9f7deaa020d81e9a).
+<img src="images/plots-crop.PNG" width="100%">
+
+Quick links:
+- Discord: [te-tokenspice](https://discord.com/channels/701149241107808327/861621607825801216), [First time](https://discord.gg/FREcbdnUTw)
+- Twitter: [@tokenspice](https://twitter.com/tokenspice)
+- [Documentation](https://www.notion.so/TokenSPICE2-Docs-b6fc0b91269946eb9f7deaa020d81e9a)
+
+History: TokenSPICE was [initially built to model](https://github.com/tokenspice/tokenspice0.1) the [Web3 Sustainability Loop](https://blog.oceanprotocol.com/the-web3-sustainability-loop-b2a4097a36e). It's now been generalized to support EVM, on arbitary netlists. Most initial work was by [trentmc](https://github.com/trentmc) ([Ocean Protocol](https://www.oceanprotocol.com)); more contributors have joined since.
 
 # Contents
 
@@ -52,7 +60,7 @@ Open a new terminal and:
 ```console
 cd tokenspice
 
-#active env't
+#activate env't
 conda activate tokenspiceenv
 
 #run ganache
@@ -99,6 +107,8 @@ pytest web3engine/test/test_btoken.py
 
 ## First usage of tsp
 
+We use `tsp` for TokenSPICE in the command line.
+
 First, add pwd to bash path.
 ```console
 export PATH=$PATH:.
@@ -115,7 +125,7 @@ Here's an example on a supplied netlist `simplegrant`.
 
 Simulate the netlist, storing results to `outdir_csv`.
 ```console
-tsp run assets/netlists/simplegrant/netlist.py outdir_csv outdir_csv
+tsp run assets/netlists/simplegrant/netlist.py outdir_csv
 ```
 
 Output plots to `outdir_png`, and view them.
@@ -284,6 +294,8 @@ Here are further resources.
 * Intro to SPICE & TokenSPICE [[Gslides - short](https://docs.google.com/presentation/d/167nbvrQyr6vdvTE6exC1zEA3LktrPzbR08Cg5S1sVDs)] [[Gslides - long](https://docs.google.com/presentation/d/1yUrU7AI702zpRZve6CCR830JSXrpPmfg00M5x9ndhvE)]
 * TE for Ocean V3 [[Gslides](https://docs.google.com/presentation/d/1DmC6wfyl7ZMjuB-h3Zbfy--xFuYSt3tGACpgfJH9ZFk/edit)] [[video](https://www.youtube.com/watch?v=ztnIf9gCsNI&ab_channel=TokenEngineering)] , TE Community Workshop, Dec 9, 2020
 * TE for Ocean V4.1 [[GSlides](https://docs.google.com/presentation/d/1JfFi9hT4Lf3UQKfCXGDhA27YPpPcWsXU7YArfRGAmMQ/edit#slide=id.p1)] [[slides](http://trent.st/content/20210521%20Ocean%20Market%20Balancer%20Simulations%20For%20TE%20Academy.pdf)] [[video](https://www.youtube.com/watch?v=TDG53PTbqhQ&ab_channel=TokenEngineering)] , TE Academy, May 21, 2021
+
+Fishnado image sources (CC): [[1](https://www.flickr.com/photos/robinhughes/404457553)] [[2](https://commons.wikimedia.org/wiki/File:Fish_Tornado_(226274841).jpeg)]
 
 # 🏛 License
 
