@@ -34,6 +34,16 @@ jobs:
         run: |
           conda install mypy
           mypy ./
+      - name: Clone contracts
+        run: |
+          git clone git clone https://github.com/oceanprotocol/contracts
+          cd contracts
+          npm i
+          npm run deploy
+          cd ../
+      - name: Edit artifacts path
+        run: |
+          sed '/ARTIFACTS_PATH = contracts/artifacts'
       - name: Test with pytest
         run: |
           conda install pytest
